@@ -5,15 +5,8 @@
 <title>PractiCeneval 8</title>
 </head>
 <body>
-    <?php
-                ##CONEXION A BD
-                function Conectarse(){
-                    if(!($link=mysqli_connect("localhost","root","","ceneval"))){
-                        echo "Error conectando a la base de datos.";
-                        exit();
-                    }
-                    return $link;
-                }
+<?php
+                include("conexion.php");
                 $link=Conectarse();
                 ##DATOS PERSONA
                 $user = $_POST['user'];
@@ -23,7 +16,7 @@
                 ##VALIDACION CONTRASEÑA
                 if($pass == $pass1){
                     ##INGRESAR DATOS PERSONA A LA BASE DE DATOS
-                    $consulta="INSERT INTO Alumno (usuario,contraseña) VALUES ('$user','$pass')";
+                    $consulta="INSERT INTO Alumno (usuario,contrasena) VALUES ('$user','$pass')";
                     if(mysqli_query($link,$consulta)){
                         echo "Usuario registrado";
                         echo "<BR>";
@@ -35,6 +28,6 @@
                         echo "<BR>";
                     }
                 mysqli_close($link);
-    ?>
+?>
 </body>
 </html>
