@@ -1,7 +1,7 @@
 <?php
                 ##CONEXION A BD
                 function Conectarse(){
-                    if(!($link=mysqli_connect("localhost","root","","horoscopo"))){
+                    if(!($link=mysqli_connect("localhost","root","","ceneval"))){
                         echo "Error conectando a la base de datos.";
                         exit();
                     }
@@ -18,13 +18,14 @@
                     ##INGRESAR DATOS PERSONA A LA BASE DE DATOS
                     $consulta="INSERT INTO Alumno (usuario,contraseña) VALUES ('$user','$pass')";
                     if(mysqli_query($link,$consulta)){
-                        alert("Registro Exitoso");
-                        mysqli_close($link);
-                        header('Location: login.php');
-                        }
+                        echo "Usuario registrado";
+                        echo "<BR>";
+                        echo "<a href='index.php'>Regresa al menú principal</a>";
+                    }
                 }
                 else{
-                    alert("Las contraseñas no coinciden");
-                    header('Location: registro.php');
+                        echo "<br>Usuario no registrado";
+                        echo "<BR>";
                     }
+                mysqli_close($link);
 ?>
