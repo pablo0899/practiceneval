@@ -1,4 +1,11 @@
-<?php
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>PractiCeneval 8</title>
+</head>
+<body>
+    <?php
                 ##CONEXION A BD
                 function Conectarse(){
                     if(!($link=mysqli_connect("localhost","root","","ceneval"))){
@@ -28,4 +35,6 @@
                         echo "<BR>";
                     }
                 mysqli_close($link);
-?>
+    ?>
+</body>
+</html>
