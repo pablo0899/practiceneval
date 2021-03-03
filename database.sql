@@ -6,9 +6,9 @@ create table Alumno(
     `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `usuario` varchar(32) NOT NULL,
     `contrasena` varchar(32) NOT NULL,
-    `puntuacion` float ,
-    `correctas` int ,
-    `incorrectas` int
+    `puntuacion` float NOT NULL,
+    `correctas` int NOT NULL,
+    `incorrectas` int NOT NULL
 );
 
 create table Examen(
