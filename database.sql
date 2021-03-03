@@ -5,7 +5,7 @@ use ceneval;
 create table Alumno(
     `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `usuario` varchar(32) NOT NULL,
-    `contraseña` varchar(32) NOT NULL,
+    `contrasena` varchar(32) NOT NULL,
     `puntuacion` float NOT NULL,
     `correctas` int NOT NULL,
     `incorrectas` int NOT NULL
