@@ -25,3 +25,6 @@ create table Examen(
 
 INSERT INTO examen (area,pregunta,opcionA, opcionB, opcionC, opcionD, opcionE, justificacion) 
 VALUES ('Programacion','Es un lenguaje orientado a objetos','C++','Python','PHP','Pearl','Ninguno de los anteriores','C++ es un lenguaje orientado a objetos, ya que permite trabajar con Entidades (Objetos)');
+
+INSERT INTO examen (area,pregunta,opcionA, opcionB, opcionC, opcionD, opcionE, justificacion) 
+VALUES ('Bases de datos','Sentencia para ingresar datos a una tabla','INSERT INTO','ALTER TABLE','INSERT','DROP','SELECT','INSERT INTO es la sentencia utilizada para ingresar datos a una base de datos');
