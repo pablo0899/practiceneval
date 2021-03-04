@@ -3,6 +3,7 @@
 --
 DROP DATABASE IF EXISTS `ceneval`;
 CREATE DATABASE `ceneval`;
+USE `ceneval`;
 
 -- --------------------------------------------------------
 
@@ -40,7 +41,6 @@ CREATE TABLE IF NOT EXISTS `examen` (
   `justificacion` varchar(128) DEFAULT NULL,
   PRIMARY KEY (`id_pregunta`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
