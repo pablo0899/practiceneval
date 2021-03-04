@@ -13,9 +13,20 @@ CREATE TABLE IF NOT EXISTS `alumno` (
 `incorrectas` int NOT NULL,
 PRIMARY KEY (`id`)
 );
+
+DROP TABLE IF EXISTS `examen_alumno`;
+CREATE TABLE IF NOT EXISTS `examen_alumno` (
+`usuario` varchar(32) NOT NULL,
+`id_pregunta` int NOT NULL,
+`respuesta_respondida` char NOT NULL,
+`respuesta_correcta` char NOT NULL,
+CONSTRAINT FK_ID_PREGUNTA FOREIGN KEY (id_pregunta) REFERENCES examen(id_pregunta),
+CONSTRAINT FK_RESPUESTA_CORRECTA FOREIGN KEY (respuesta_correcta) REFERENCES examen(respuesta_correcta)
+);
+
 DROP TABLE IF EXISTS `examen`;
 CREATE TABLE IF NOT EXISTS `examen` (
-`id_pregunta` int(11) NOT NULL AUTO_INCREMENT,
+`id_pregunta` int NOT NULL AUTO_INCREMENT,
 `area` varchar(32) DEFAULT NULL,
 `pregunta` varchar(64) DEFAULT NULL,
 `opcionA` varchar(64) DEFAULT NULL,
@@ -27,6 +38,7 @@ CREATE TABLE IF NOT EXISTS `examen` (
 `respuesta_correcta` char(1) DEFAULT NULL,
 PRIMARY KEY (`id_pregunta`)
 );
+
 INSERT INTO `examen` (`area`, `pregunta`, `opcionA`, `opcionB`, `opcionC`, `opcionD`, `opcionE`, `justificacion`, `respuesta_correcta`) VALUES
 ('Area', 'PREGUNTA 1', 'OPCION A', 'OPCION B', 'OPCION C', 'OPCION D', 'OPCION E', 'ESTO ES UNA JUSTIFICACION','A'),
 ('Area', 'PREGUNTA 2', 'OPCION A', 'OPCION B', 'OPCION C', 'OPCION D', 'OPCION E', 'ESTO ES UNA JUSTIFICACION','C'),
