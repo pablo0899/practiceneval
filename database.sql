@@ -16,11 +16,11 @@ CREATE TABLE IF NOT EXISTS `examen` (
   `id_pregunta` int(11) NOT NULL AUTO_INCREMENT,
   `area` varchar(32) DEFAULT NULL,
   `pregunta` varchar(64) DEFAULT NULL,
-  `opcion A` varchar(64) DEFAULT NULL,
-  `opcion B` varchar(64) DEFAULT NULL,
-  `opcion C` varchar(64) DEFAULT NULL,
-  `opcion D` varchar(64) DEFAULT NULL,
-  `opcion E` varchar(64) DEFAULT NULL,
+  `opcionA` varchar(64) DEFAULT NULL,
+  `opcionB` varchar(64) DEFAULT NULL,
+  `opcionC` varchar(64) DEFAULT NULL,
+  `opcionD` varchar(64) DEFAULT NULL,
+  `opcionE` varchar(64) DEFAULT NULL,
   `justificacion` varchar(128) DEFAULT NULL,
   PRIMARY KEY (`id_pregunta`)
 );
