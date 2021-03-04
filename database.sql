@@ -15,11 +15,11 @@ create table Examen(
     `id_pregunta` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `area` varchar(32),
     `pregunta` varchar(64),
-    `opcion A` varchar(64),
-    `opcion B` varchar(64),
-    `opcion C` varchar(64),
-    `opcion D` varchar(64),
-    `opcion E` varchar(64),
+    `opcionA` varchar(64),
+    `opcionB` varchar(64),
+    `opcionC` varchar(64),
+    `opcionD` varchar(64),
+    `opcionE` varchar(64),
     `justificacion` varchar(128) 
 );
 
