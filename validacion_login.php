@@ -19,8 +19,8 @@
         header("Location:examen.php");
     }
     else{
-        echo "<p>Error, Usuario/Contraseña incorrectos<p>";
-        echo "<p><a href='login.php'>Volver a intentarlo</a><p>";
+        echo "<p class='index'>Error, Usuario/Contraseña incorrectos<p>";
+        echo "<a href='login.php'><input type='button' value='Volver a intentarlo' id='boton_validacion'></a>";
     }
     mysqli_close($link);
 ?>   

@@ -17,6 +17,7 @@
             </tr>
         </table>
         <input type="submit" value="Aceptar"> 
+        <a href='index.php'><input type='button' value='Menú principal' id='boton_validacion'></a>
     </form>    
 </body>
 </html>  
