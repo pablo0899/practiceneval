@@ -25,7 +25,6 @@ CREATE TABLE IF NOT EXISTS `examen` (
 `opcionE` varchar(64) DEFAULT NULL,
 `justificacion` varchar(128) DEFAULT NULL,
 `respuesta_correcta` char(1) DEFAULT NULL,
-`id_alumno` int FOREIGN KEY REFERENCES `alumno` NOT NULL,
 PRIMARY KEY (`id_pregunta`)
 );
 INSERT INTO `examen` (`area`, `pregunta`, `opcionA`, `opcionB`, `opcionC`, `opcionD`, `opcionE`, `justificacion`, `respuesta_correcta`) VALUES
