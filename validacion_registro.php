@@ -14,9 +14,9 @@
     $pass = $_POST['pass'];
     $pass1 = $_POST['pass1'];
 
-    $consulta1="SELECT * FROM Alumno WHERE usuario = ' $user' ";
+    $resultado= mysqli_query($link,"SELECT * FROM alumno WHERE usuario='$user' ");
 
-    if(!$consulta1){
+    if(!(mysqli_num_rows($resultado) > 0)){
         ##VALIDACION CONTRASEÑA
         if($pass == $pass1){
             ##INGRESAR DATOS PERSONA A LA BASE DE DATOS
