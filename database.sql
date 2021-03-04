@@ -22,3 +22,6 @@ create table Examen(
     `opcion E` varchar(64),
     `justificacion` varchar(128) 
 );
+
+INSERT INTO examen (area,pregunta,opcionA, opcionB, opcionC, opcionD, opcionE, justificacion) 
+VALUES ('Programacion','Es un lenguaje orientado a objetos','C++','Python','PHP','Pearl','Ninguno de los anteriores','C++ es un lenguaje orientado a objetos, ya que permite trabajar con Entidades (Objetos)');
