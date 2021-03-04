@@ -9,9 +9,12 @@
 <?php
     include("conexion.php");
     $link=Conectarse();
+    session_start();
 
     $user = $_POST['user'];
     $pass = $_POST['pass'];
+
+    $_SESSION['user'] = $user;
 
     $resultado = mysqli_query($link,"SELECT * FROM Alumno WHERE usuario='$user' and contrasena='$pass'");
     $consulta = mysqli_fetch_array($resultado);
