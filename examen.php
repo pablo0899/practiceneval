@@ -11,6 +11,8 @@
     $link=Conectarse();
     $query = 'SELECT id_pregunta,area,pregunta,opcionA, opcionB, opcionC, opcionD, opcionE, justificacion FROM examen';
     $total = 'SELECT COUNT(*) FROM examen ';
+    session_start();
+    $user = $_SESSION['user'];
 
     $result = mysqli_query($link,"SELECT COUNT(*) FROM examen");
     $row=mysqli_fetch_array($result);
@@ -19,10 +21,14 @@
 ?>   
     <form id="formulario_examen" action="examen_validacion.php" method="POST">  
         <table id="table_examen">
+            <tr>
+                <th colspan="3">Bienvenid@ <strong><?php echo $user;?></strong></th>
+            </tr>
             <?php foreach ($link->query("SELECT * from examen WHERE id_pregunta  ='$num_pregunta' ") as $row) { ?>
             <tr>
                 <td><p>Pregunta</p></td>
-                <td><input type="text" name="numero_p" value="<?php echo $row['id_pregunta']; ?>"></td>
+                <td><?php echo $row['id_pregunta']; ?></td>
+                <td class="pregunta_hidden"><input type="hidden" name="numero_p" value="<?php echo $row['id_pregunta']; ?>"></td>
             </tr>
             <tr>
                 <td colspan="2"><?php echo $row['pregunta']; ?></td>

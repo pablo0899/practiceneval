@@ -25,8 +25,9 @@
     $insertar="INSERT INTO examen_alumno (usuario,id_pregunta,respuesta_respondida,respuesta_correcta) VALUES ('$user','$num_preg','$answer','$respuesta_correcta')";
     mysqli_query($link,$insertar);
 
+    echo $answer;
 
-    if($consulta){
+    if($answer == $respuesta_correcta){
         $correcta= mysqli_query($link,"UPDATE alumno SET correctas = correctas+1 WHERE usuario = '$user' ");
         header("Location:examen.php");
     }

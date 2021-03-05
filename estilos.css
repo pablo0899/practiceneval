@@ -104,3 +104,6 @@ input[type="submit"] {
     background: #eee;
     padding: .7em;
 }
+.pregunta_hidden{
+    display:none;
+}
