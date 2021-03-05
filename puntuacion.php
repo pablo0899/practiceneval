@@ -56,7 +56,12 @@
             <td><?php echo $row['respuesta_correcta']; ?></td>
             <td><?php foreach ($link->query("SELECT justificacion from examen WHERE id_pregunta  = '$num' ") as $row) {echo $row['justificacion'];} ?></td>
         </tr>
-        <?php  } mysqli_close($link); #session_destroy();?>
+        <?php 
+            $reset= mysqli_query($link,"UPDATE alumno SET correctas = 0 WHERE usuario = '$user' ");
+            $reset1= mysqli_query($link,"UPDATE alumno SET incorrectas = 0 WHERE usuario = '$user' ");
+            $reset2= mysqli_query($link,"DELETE FROM examen_alumno WHERE usuario = '$user' ");  } mysqli_close($link); 
+            session_destroy();
+        ?>
         </table>
         <a href="index.php">
             <input type="button" value="Salir" id='boton_validacion'>
