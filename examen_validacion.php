@@ -3,7 +3,7 @@
 <head>    
     <title>PractiCeneval</title>    
     <meta charset="UTF-8">
-    <link href="estilos.css" rel="stylesheet" type="text/css"/>    
+    <link href="estilos3.css" rel="stylesheet" type="text/css"/>    
 </head>  
 <body>
 <?php

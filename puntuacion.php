@@ -3,20 +3,24 @@
 <head>    
     <title>PractiCeneval</title>    
     <meta charset="UTF-8">
-    <link href="estilos.css" rel="stylesheet" type="text/css"/>    
+    <link href="estilos3.css" rel="stylesheet" type="text/css"/>    
 </head>  
-<body>
+<body id="body_puntuacion">
 <?php
     include("conexion.php");
     $link=Conectarse();
     session_start();
     $user = $_SESSION['user'];
-?>     
+?>  
+<div class="cuadro2">
     <form id="formulario_examen">
         <?php 
             foreach ($link->query("SELECT * from alumno WHERE usuario  = '$user' ") as $row) { 
         ?>
-        <h1>Puntuación general</h1>    
+        <div class="cuadro">
+            <h1>Puntuación general</h1>
+        </div>
+    
         <p>
             <strong>
                 <?php echo $row['usuario']; ?>
@@ -68,5 +72,6 @@
             <input type="button" value="Salir" id='boton_validacion'>
         </a>
     </form>
+</div>   
 </body>
 </html>  
