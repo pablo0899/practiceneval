@@ -40,7 +40,16 @@
         </p>
         <p>
             <strong>
-                <?php echo ($row['correctas'] * 10) / ($row['correctas'] + $row['incorrectas']); }?>
+                <?php
+                if ($row['correctas'] == 0 || $row['incorrectas'] == 0){
+                    echo "0";
+                }
+                else{
+                    $puntuacion1 = ($row['correctas'] * 10) / ($row['correctas'] + $row['incorrectas']);
+                    echo $puntuacion1;
+                } 
+                }
+                ?>
             </strong>
         </p>
         <table id="table_examen" class="puntajes">
